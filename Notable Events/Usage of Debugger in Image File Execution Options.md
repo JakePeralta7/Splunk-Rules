@@ -1,6 +1,6 @@
 # Usage of Debugger in Image File Execution Options
 
-## [MITRE ATT&CK](https://attack.mitre.org/techniques/T1546/012/)
+## [MITRE ATT&CK](https://attack.mitre.org/techniques/T1546/012/){:target="_blank"}
 Tactic: Persistence
 Technique: Event Triggered Execution
 Sub-Technique: Image File Execution Options Injection
