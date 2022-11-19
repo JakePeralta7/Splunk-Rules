@@ -7,6 +7,6 @@ The Debugger registry key can allow an adversary to intercept the execution of f
 ```spl
 | tstats count 
 from datamodel=Endpoint.Registry 
-where Registry.registry_path="*SOFTWARE\\Microsoft\\*\\Image File Execution Options\\*\\Debugger" Registry.action=modified
+where Registry.registry_path="*SOFTWARE\\Microsoft\\*\\Image File Execution Options\\*\\Debugger" AND Registry.action=modified
 by host Registry.user Registry.registry_path Registry.registry_value_name Registry.registry_value_type Registry.registry_value_data
 ```
