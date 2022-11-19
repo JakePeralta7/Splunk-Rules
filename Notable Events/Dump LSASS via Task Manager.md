@@ -1,8 +1,10 @@
 # Dump LSASS via Task Manager
 
-## MITRE ATT&CK
+## [MITRE ATT&CK](https://attack.mitre.org/techniques/T1003/001/)
 Tactic: Credential Access
+
 Technique: OS Credential Dumping
+
 Sub-Technique: LSASS Memory
 
 ## Overview
