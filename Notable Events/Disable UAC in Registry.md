@@ -1,5 +1,12 @@
 # Disable UAC in Registry
 
+## [MITRE ATT&CK](https://attack.mitre.org/techniques/T1548/002/)
+Tactic: Enterprise
+
+Technique: Abuse Elevation Control Mechanism
+
+Sub-Technique: Bypass User Account Control
+
 ## Description
 UAC, short for User Account Control, is a component of Microsoft Windows’s security system. It can help mitigate the impact of malware by preventing apps from making unwanted changes on the PC.
 
