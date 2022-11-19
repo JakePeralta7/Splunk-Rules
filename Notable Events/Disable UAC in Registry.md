@@ -15,7 +15,7 @@ Windows will pop up a UAC confirmation dialog to ask you to confirm the change o
 ## SPL
 ```spl
 | tstats count 
-from datamodel=Endpoint.Registry 
-where Registry.registry_path="*SOFTWARE\\Microsoft\\*\\Policies\\System\\EnableLUA" AND Registry.action=modified 
-by host Registry.user Registry.registry_path Registry.registry_value_name Registry.registry_value_type Registry.registry_value_data
+    from datamodel=Endpoint.Registry 
+    where Registry.registry_path="*SOFTWARE\\Microsoft\\*\\Policies\\System\\EnableLUA" AND Registry.action=modified 
+    by host Registry.user Registry.registry_path Registry.registry_value_name Registry.registry_value_type Registry.registry_value_data
 ```
