@@ -1,7 +1,7 @@
 # Disable UAC in Registry
 
 ## [MITRE ATT&CK](https://attack.mitre.org/techniques/T1548/002/)
-Tactic: Enterprise
+Tactic: Privilege Escalation
 
 Technique: Abuse Elevation Control Mechanism
 
