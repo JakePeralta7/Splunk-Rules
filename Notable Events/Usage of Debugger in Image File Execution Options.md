@@ -1,5 +1,10 @@
 # Usage of Debugger in Image File Execution Options
 
+## MITRE ATT&CK
+Tactic: Persistence
+Technique: Event Triggered Execution
+Sub-Technique: Image File Execution Options Injection
+
 ## Description
 The Debugger registry key can allow an adversary to intercept the execution of files, causing a different process to be executed. This functionality can be abused by an adversary to establish persistence.
 
