@@ -6,7 +6,7 @@ This search looks for arguments to certutil.exe indicating the manipulation or e
 ## SPL
 ```spl
 | tstats count
-from datamodel=Endpoint.Processes
-where Processes.process_name=certutil.exe Processes.process="*-exportPFX*"
-by Processes.dest Processes.user Processes.parent_process Processes.process_name Processes.process Processes.process_id Processes.parent_process_id
+    from datamodel=Endpoint.Processes
+    where Processes.process_name=certutil.exe Processes.process="*-exportPFX*"
+    by Processes.dest Processes.user Processes.parent_process Processes.process_name Processes.process Processes.process_id Processes.parent_process_id
 ```
