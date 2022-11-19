@@ -15,7 +15,7 @@ Aacinfo can be used to export Trellix Endpoint Security Threat Prevention Policy
 ## SPL
 ```spl
 | tstats count
-from datamodel=Endpoint.Processes
-where Processes.process_name=aacinfo.exe
-by Processes.dest Processes.user Processes.original_file_name Processes.parent_process Processes.process_name Processes.process Processes.process_id Processes.parent_process_id
+    from datamodel=Endpoint.Processes
+    where Processes.process_name=aacinfo.exe
+    by Processes.dest Processes.user Processes.original_file_name Processes.parent_process Processes.process_name Processes.process Processes.process_id Processes.parent_process_id
 ```
