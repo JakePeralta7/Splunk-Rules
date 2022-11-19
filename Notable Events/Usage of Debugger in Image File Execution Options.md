@@ -2,7 +2,9 @@
 
 ## [MITRE ATT&CK](https://attack.mitre.org/techniques/T1546/012/)
 Tactic: Persistence
+
 Technique: Event Triggered Execution
+
 Sub-Technique: Image File Execution Options Injection
 
 ## Description
