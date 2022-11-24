@@ -6,6 +6,6 @@ this detection is based on the creation of file in the C:\Windows\System32\Tasks
 
 ## SPL
 ```spl
-| from datamodel "Endpoint.Filesystem"
+| from datamodel Endpoint.Filesystem
 | search file_path=C:\\Windows\\System32\\Tasks\\*
 ```
