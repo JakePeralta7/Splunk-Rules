@@ -4,6 +4,8 @@
 This rule will let us know when a computer has been shutdown
 
 ## SPL
+```spl
 index=* sourcetype="WinEventLog:System" EventCode=1074
 | table _time ComputerName Shutdown_Type Message
 | sort - _time
+```
