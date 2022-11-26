@@ -20,4 +20,5 @@ It is not entirely common for certutil.exe to contact public IP space. However, 
     from datamodel=Endpoint.Processes
     where (Processes.process_name=certutil.exe OR Processes.original_file_name=CertUtil.exe) AND ((Processes.process=*urlcache* Processes.process=*split*) OR Processes.process=*urlcache*)
     by Processes.dest Processes.user Processes.parent_process Processes.process_name Processes.process Processes.process_id Processes.original_file_name Processes.parent_process_id
+| `drop_dm_object_name(Processes)`
 ```
