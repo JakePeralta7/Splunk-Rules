@@ -18,4 +18,5 @@ This rule detecte execution of wevtutil.exe to disable logs. This technique was 
     from datamodel=Endpoint.Processes
     where Processes.process_name="wevtutil.exe" Processes.process="* sl *" Processes.process="*/e:false*"
     by Processes.parent_process_name Processes.parent_process Processes.process_name Processes.process Processes.dest Processes.user Processes.process_id Processes.process_guid
+| `drop_dm_object_name(Processes)`
 ```
