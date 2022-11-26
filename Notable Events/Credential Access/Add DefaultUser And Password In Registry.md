@@ -14,7 +14,7 @@ This behavior is not a common practice and really a suspicious TTP or alert need
 
 ## SPL
 ```spl
-| tstats `security_content_summariesonly` count 
+| tstats count 
     from datamodel=Endpoint.Registry 
     where Registry.registry_path="*SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon*" AND Registry.registry_value_name=DefaultPassword OR Registry.registry_value_name=DefaultUserName 
     by _time host Registry.user Registry.process_name Registry.process_guid Registry.registry_path Registry.registry_value_name Registry.registry_value_data Registry.registry_key_name 
