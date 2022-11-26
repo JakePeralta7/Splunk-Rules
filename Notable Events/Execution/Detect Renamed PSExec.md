@@ -18,4 +18,5 @@ During triage, validate this is the legitimate version of PsExec by reviewing th
     from datamodel=Endpoint.Processes 
     where (Processes.process_name!=psexec.exe OR Processes.process_name!=psexec64.exe) AND Processes.original_file_name=psexec.c 
     by Processes.dest Processes.user Processes.parent_process_name Processes.process_name Processes.process Processes.process_id Processes.parent_process_id Processes.original_file_name
+| `drop_dm_object_name(Processes)`
 ```
