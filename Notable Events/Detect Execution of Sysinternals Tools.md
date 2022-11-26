@@ -10,5 +10,6 @@ During triage, check which Sysinternals tool was executed (in the registry path)
 | tstats count
     from datamodel=Endpoint.Registry 
     where Registry.registry_path="HKU*\\SOFTWARE\\Sysinternals\\*\\EulaAccepted"
-    by _time Registry.dest Registry.user Registry.action Registry.registry_path Registry.registry_value_name Registry.registry_value_data Registry.process_guid
+    by _time host Registry.user Registry.action Registry.registry_path Registry.registry_value_name Registry.registry_value_data Registry.process_guid
+| `drop_dm_object_name(Registry)`
 ```
