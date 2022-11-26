@@ -15,13 +15,13 @@ This command is not so commonly executed by a normal user or even an admin to ch
 | tstats count
     from datamodel=Endpoint.Processes
     where Processes.process = "*whoami*" Processes.process = "*/groups*"
-    by _time Processes.dest Processes.user Processes.parent_process Processes.process_name Processes.process Processes.process_id Processes.parent_process_id Processes.parent_process_guid 
+    by _time host Processes.user Processes.parent_process Processes.process_name Processes.process Processes.process_id Processes.parent_process_id Processes.parent_process_guid 
 | `drop_dm_object_name(Processes)` 
-| join left=L right=R where L.parent_process_guid=R.parent_process_guid L.dest=R.dest 
+| join left=L right=R where L.parent_process_guid=R.parent_process_guid L.host=R.host 
     [ tstats count 
         from datamodel=Endpoint.Processes 
         where Processes.process="*find*" Processes.process="*12288*"
-        by Processes.dest Processes.user Processes.parent_process Processes.process_name Processes.process Processes.process_id Processes.parent_process_id Processes.parent_process_guid 
+        by host Processes.user Processes.parent_process Processes.process_name Processes.process Processes.process_id Processes.parent_process_id Processes.parent_process_guid 
     | `drop_dm_object_name(Processes)`] 
-| table _time L.dest L.user L.parent_process L.parent_process_id L.process_name L.process L.process_id R.process_name R.process R.process_id
+| table _time L.host L.user L.parent_process L.parent_process_id L.process_name L.process L.process_id R.process_name R.process R.process_id
 ```
