@@ -16,6 +16,7 @@ You can use bitsadmin /list /verbose to list out the jobs during investigation.
 ```spl
 | tstats count
     from datamodel=Endpoint.Processes
-    where `process_bitsadmin` Processes.process IN (*create*, *addfile*, *setnotifyflags*, *setnotifycmdline*, *setminretrydelay*, *setcustomheaders*, *resume* )
+    where (Processes.process_name=bitsadmin.exe OR Processes.original_file_name=bitsadmin.exe) Processes.process IN (*create*, *addfile*, *setnotifyflags*, *setnotifycmdline*, *setminretrydelay*, *setcustomheaders*, *resume*)
     by Processes.dest Processes.user Processes.original_file_name Processes.parent_process Processes.process_name Processes.process Processes.process_id Processes.parent_process_id
+| `drop_dm_object_name(Processes)`
 ```
