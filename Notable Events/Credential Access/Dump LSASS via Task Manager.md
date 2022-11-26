@@ -16,4 +16,5 @@ Obtaining user operating system (OS) credentials from a targeted device is among
     from datamodel=Endpoint.Filesystem 
     where Filesystem.file_name=lsass.DMP AND Filesystem.action=created
     by host Filesystem.user Filesystem.action Filesystem.file_path Filesystem.process_id
+| `drop_dm_object_name(Filesystem)`
 ```
