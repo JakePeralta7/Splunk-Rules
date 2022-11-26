@@ -16,4 +16,5 @@ This rule detects a suspicious 7z process with commandline pointing to SMB netwo
     from datamodel=Endpoint.Processes 
     where (Processes.process_name ="7z.exe" OR Processes.process_name = "7za.exe" OR Processes.original_file_name = "7z.exe" OR Processes.original_file_name = "7za.exe") AND (Processes.process="*\\C$\\*" OR Processes.process="*\\Admin$\\*" OR Processes.process="*\\IPC$\\*") 
     by Processes.original_file_name Processes.parent_process_name Processes.parent_process Processes.process_name Processes.process Processes.parent_process_id Processes.process_id Processes.dest Processes.user
+| `drop_dm_object_name(Processes)`
 ```
