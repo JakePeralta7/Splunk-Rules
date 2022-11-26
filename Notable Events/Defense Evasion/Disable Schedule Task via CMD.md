@@ -18,4 +18,5 @@ This TTP is a good pivot to check further why and what other process run before 
     from datamodel=Endpoint.Processes 
     where Processes.process_name=schtasks.exe Processes.process=*/change* Processes.process=*/disable* 
     by Processes.user Processes.process_name Processes.process Processes.parent_process_name Processes.parent_process Processes.dest
+| `drop_dm_object_name(Processes)`
 ```
