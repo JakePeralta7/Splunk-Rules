@@ -23,7 +23,7 @@ The values of the keys listed are commands that are executed when the handler op
 ```spl
 | tstats count
     from datamodel=Endpoint.Registry 
-    where Registry.registry_path="*\\shell\\*\\command\\*" Registry.registry_value_data!="(Empty)"
+    where Registry.registry_path="*\\shell\\*\\command\\*" AND NOT Registry.registry_value_data="(Empty)"
     by _time host Registry.user Registry.action Registry.registry_path Registry.registry_value_name Registry.registry_value_data Registry.process_name
 | `drop_dm_object_name(Registry)`
 ```
