@@ -11,6 +11,14 @@ The command `tstats` allows us to display highly customizable and fast questions
 | sort - count
 ```
 
+2. Displaying all the sourcetypes from all the indexes
+```spl
+| tstats count 
+    where index=* 
+    by index sourcetype
+| sort - count
+```
+
 ## Analyzing search usage
 1. Displaying amount of searches by user and app
 ```spl
