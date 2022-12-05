@@ -1,7 +1,9 @@
 # TODO
 
 ## General
-1. Create an App for Cyber, there we will put our custom:
+1. Install the app - Splunk Essentials for Cloud and Enterprise
+
+2. Create an App for Cyber, there we will put our custom:
     - eventtype
     - macros
     - field aliases
@@ -14,4 +16,4 @@
 ## Macros
 1. Create a macro for each data vendor (like master filters), optimize it by specifying the index, source and sourcetype
 
-2. Create and maintain a single macro for each rule for exceptions, the name will be <rule_name>-exceptions (no spaces allowed)
+2. Create and maintain a single macro for each rule for exceptions, the name convention will be `<rule_name>-exceptions` (no spaces allowed)
