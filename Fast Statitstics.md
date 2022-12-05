@@ -26,3 +26,8 @@ index=_audit action=search
 | stats count by app user
 | sort - count
 ```
+
+```spl
+index=wineventlog
+| stats count by result EventCode
+```
