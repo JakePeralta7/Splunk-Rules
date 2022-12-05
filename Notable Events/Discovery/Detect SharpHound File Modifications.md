@@ -17,5 +17,5 @@ During traige, review parallel processes for further suspicious behavior. Typica
 | tstats count 
     from datamodel=Endpoint.Filesystem 
     where Filesystem.file_name IN ("*bloodhound.zip", "*_computers.json", "*_gpos.json", "*_domains.json", "*_users.json", "*_groups.json", "*_ous.json", "*_containers.json") 
-    by Filesystem.file_create_time Filesystem.process_id Filesystem.file_name Filesystem.file_path Filesystem.dest
+    by Filesystem.dest Filesystem.file_create_time Filesystem.process_id Filesystem.file_name Filesystem.file_path
 ```
