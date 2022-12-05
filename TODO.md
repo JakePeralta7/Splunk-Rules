@@ -13,6 +13,8 @@
 ## Data Models
 1. Add the field process_name to Endpoint.Registry
 
+2. Use Splunk Security Essentials -> Security Operations -> CIM Compliance Check, to get statistics about fields population per product
+
 ## Macros
 1. Create a macro for each data vendor (like master filters), optimize it by specifying the index, source and sourcetype
 
