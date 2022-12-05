@@ -15,7 +15,7 @@ This rule detects a potential account discovery series of command used by severa
 | tstats count 
     from datamodel=Endpoint.Processes 
     where (Processes.process_name="net.exe" OR Processes.original_file_name="net.exe" OR Processes.process_name="net1.exe" OR Processes.original_file_name="net1.exe") AND (Processes.process="*user*" OR Processes.process="*config*" OR Processes.process="*view /all*") 
-    by Processes.process_name Processes.dest Processes.user Processes.parent_process_name 
+    by Processes.dest Processes.process_name Processes.user Processes.parent_process_name 
 | where count >= 5
 | `drop_dm_object_name(Processes)`
 ```
