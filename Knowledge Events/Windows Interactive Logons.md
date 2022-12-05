@@ -1,6 +1,8 @@
 # Windows Interactive Logons
 
 ## Description
+The following rule identifies when a user logged in to a windows machine interactively, 
+this detection is based on the modification of the registry value `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\LastLoggedOnUser`
 
 ## SPL
 ```spl
